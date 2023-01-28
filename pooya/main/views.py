@@ -43,6 +43,7 @@ def home(request):
             sender = form.cleaned_data['sender']
             recipients = ['pooya.jv@gmail.com']
             send_mail(name, message, sender, recipients)
+            print('0000000000000000000000000000000000000000000000000000000000000000')
             return render(request, 'main/index.html', {'form': form, 'message': 'Thanks for your message'})
     else:
         form = ContactForm()

@@ -5,21 +5,17 @@
 								<h2>Contact</h2>
 							</header>
 
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+							<p>You can share your thoughts with me here</p>
 
 
-							<form method="post" action="">
+							<form method="post" action="{% url 'main:homeview' %}">
 
 								<div class="row">
 									{% csrf_token %}
-									{{ form.as_p }}
 									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
+									<div class="col-6 col-12-mobile"><input type="text" name="sender" placeholder="Email" /></div>
+									<div class="col-12 ">
+										<input class="col-6 col-12-mobile" type="text" name="message" placeholder="Message">
 									</div>
 									<div class="col-12">
 										<input type="submit" value="Send Message" />
