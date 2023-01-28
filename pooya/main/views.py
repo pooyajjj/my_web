@@ -7,7 +7,7 @@ from django.core.mail import send_mail
 from django.shortcuts import render
 from .forms import ContactForm
 
-
+# this class for advaced options
 # class HomeView(View):
 
 #     def contact(request):
@@ -43,7 +43,6 @@ def home(request):
             sender = form.cleaned_data['sender']
             recipients = ['pooya.jv@gmail.com']
             send_mail(name, message, sender, recipients)
-            print('0000000000000000000000000000000000000000000000000000000000000000')
             return render(request, 'main/index.html', {'form': form, 'message': 'Thanks for your message'})
     else:
         form = ContactForm()
